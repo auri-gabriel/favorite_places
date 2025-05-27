@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:location/location.dart';
 import 'package:http/http.dart' as http;
 
-const kApiKey = 'API_KEY_HERE';
+const kApiKey = String.fromEnvironment('MAPS_API_KEY');
 
 class LocationInput extends StatefulWidget {
   const LocationInput({super.key, required this.onSelectLocation});
