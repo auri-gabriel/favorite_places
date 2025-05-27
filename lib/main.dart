@@ -4,19 +4,22 @@ import 'package:google_fonts/google_fonts.dart';
 
 import 'package:favorite_places/screens/places.dart';
 
-final colorScheme = ColorScheme.fromSeed(
+var kColorScheme = ColorScheme.fromSeed(
+  seedColor: Color.fromARGB(255, 60, 180, 144),
+);
+
+var kDarkColorScheme = ColorScheme.fromSeed(
   brightness: Brightness.dark,
-  seedColor: const Color.fromARGB(255, 102, 6, 247),
-  surface: const Color.fromARGB(255, 56, 49, 66),
+  seedColor: Color.fromARGB(255, 60, 180, 144),
 );
 
 final theme = ThemeData().copyWith(
-  scaffoldBackgroundColor: colorScheme.surface,
-  colorScheme: colorScheme,
-  textTheme: GoogleFonts.ubuntuCondensedTextTheme().copyWith(
-    titleSmall: GoogleFonts.ubuntuCondensed(fontWeight: FontWeight.bold),
-    titleMedium: GoogleFonts.ubuntuCondensed(fontWeight: FontWeight.bold),
-    titleLarge: GoogleFonts.ubuntuCondensed(fontWeight: FontWeight.bold),
+  scaffoldBackgroundColor: kDarkColorScheme.surface,
+  colorScheme: kDarkColorScheme,
+  textTheme: GoogleFonts.interTextTheme().copyWith(
+    titleSmall: GoogleFonts.inter(fontWeight: FontWeight.bold),
+    titleMedium: GoogleFonts.inter(fontWeight: FontWeight.bold),
+    titleLarge: GoogleFonts.inter(fontWeight: FontWeight.bold),
   ),
 );
 
